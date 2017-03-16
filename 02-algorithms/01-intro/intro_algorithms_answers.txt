@@ -1,0 +1,45 @@
+Using proper pseudo-code, describe three or more primitive algorithms used in your day-to-day life:
+
+1) Deciding what to eat for lunch:
+
+def eat_lunch
+	if 12pm <= current_time <= 12:30pm
+		if hunger_scale < (5/10)
+			make PB&J sandwich
+		else
+			order wings
+		end
+	else
+		continue coding
+	end
+end
+
+------------
+
+2) Deciding what to order at the bar:
+
+def hey_bartender(day, date)
+	if (day != Friday) && (day != Saturday)
+		order water
+	elsif day == Friday
+		order beer
+	elsif day == Saturday
+		order whiskey
+	elsif (day == Friday || Saturday) && (date == May 5)
+		order Margarita
+	end
+end
+
+-------------
+
+3) Deciding where to get coffee:
+
+def coffee(spare_change)
+	if spare_change > $4.00
+		return starbucks
+	elsif $2.00 < spare_change < $4.00
+		return Philz_Coffee
+	else
+		return keurig_at_home
+	end
+end

@@ -72,9 +72,27 @@ mmikkelsen.film_actor_hash["Doctor Strange"] = [bcumberbatch, rmcadams]
 
 puts "Outer kbacon #{kbacon}"
 
+def find_kevin_bacon(actor)
+	if actor.name == "kbacon"
+		return []
+	else
+		actor.film_actor_hash.each do |movie_title, actors|
+			actors.each do |co_actor|
+				movie_path = find_kevin_bacon(co_actor)
+				return [movie_title].concat(movie_path)
+			end
+		end
+	end
+end
+
+#A   A   A   A
+# \ / \ / \ /
+#	M   M   M
+# Check each actor to see if actor.name is "kbacon"
+
 #def find_kevin_bacon(actor)
 #	actor.film_actor_hash.each do |movie_title, actors|
-#		if actors.include?(kbacon)
+#		if actor.name == "kbacon"
 #			return [movie_title]
 #		else
 #			actors.each do |actor|
@@ -85,35 +103,6 @@ puts "Outer kbacon #{kbacon}"
 #	end
 #end
 
-# Check each actor to see if actor.name is "kbacon"
-
-def find_kevin_bacon(actor)
-	actor.film_actor_hash.each do |movie_title, actors|
-		if actor.name == "kbacon"
-			return [movie_title]
-		else
-			actors.each do |actor|
-				movie_array = find_kevin_bacon(actor)
-				return movie_array
-			end
-		end
-	end
-end
-
-
-#def find_kevin_bacon(actor)
-#	if actor.name == "kbacon"
-#		actor.film_actor_hash.each do |movie_title, actors|
-#			return [movie_title]
-#		end
-#	else
-#		actors.each do |actor|
-#			movie_array = find_kevin_bacon(actor)
-#			return movie_array
-#		end
-#	end
-#end
-
 	
-puts find_kevin_bacon(kknightley)
+puts find_kevin_bacon(mfreeman)
 	

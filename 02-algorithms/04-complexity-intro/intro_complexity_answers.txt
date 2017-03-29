@@ -32,6 +32,8 @@ Hmmm, this question is tricky. I think because we're talking about a binary tree
 
 lim n —> ∞ f(n) = 2^n
 
+There is no limit because there is no value at which the algorithm won't cross. 
+
 ----------------------------------------
 
 7. What is the Big-O of an algorithm that has the data points above?
@@ -57,7 +59,7 @@ end
 
 10. What is the Big-O of binary search?
 
-O(n).
+O(log n).
 
 ----------------------------------------
 

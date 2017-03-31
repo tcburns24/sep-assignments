@@ -74,3 +74,7 @@ These values don't match up exactly with the n log n values I googled, but they 
 ----------------------------------
 
 6. 
+
+This one's interesting. After graphing the data, both the "unsorted" and "sorted/reverse" graphs appear to show linear growth. So I'd say the Big-O is O(n). However, the "unsorted" graph and the "sorted/reverse" graph are not identical. This makes me think that the best way to indicate the complexity is something like O(n+x), where "x" is a second variable representing a consistently growing "excess" of recursions. 
+
+So, the short answer to this question is O(n), but the longer, more thorough answer is O(n+x). 

@@ -65,12 +65,12 @@ def bucket_sort(array, buckets)
     buckets[j] = 0
   end
   for i in 0...array.length - 1
-    buckets[array[i]] += 1
+    buckets[a[i]] += 1
   end
   i = 0
   for j in 0...array.length
     for k in 0...buckets[j]
-      array[i] = j
+      a[i] = j
       i += 1
     end
   end

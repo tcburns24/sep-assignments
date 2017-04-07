@@ -1,0 +1,43 @@
+1. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+	7 iterations.
+
+-------------------------------
+
+2. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+	3 iterations:
+
+	Iteration 1: length-7, mid [3]
+	Iteration 2: length-3, mid[1]
+	Iteration 3: length-1, mid[0]
+
+-------------------------------
+
+3. Calculate fib(10), fib(11), fib(12) by hand.
+
+	fib(10): fib(9) + fib(8) = 34 + 21  = 55
+	fib(11): fib(10) + fib(9) = 55 + 34 = 89
+	fib(12): fib(11) + fib(10) = 89 + 55 = 144
+
+================================
+
+1. Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Would you use an iterative or recursive solution? Explain your reasoning.
+
+	iterative = 0.00095
+	recursive = 0.001263
+
+	For an unsorted collection I'd use a linear search because a binary search relies on increasing or decreasing values to determine which "half" of the set to eliminate each iteration. Since an unsorted collection doesn't provide this, a linear search is my only option. 
+	
+	As for the iterative vs recursive choice, I'd go with iterative only because my iterative test run returned a faster execution time. 
+
+--------------------------------
+
+2. Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Would you use an iterative or recursive solution? Explain your reasoning.
+
+	For a sorted collection, I'd use a binary search because it would almost certainly be faster than a linear search. 
+	
+	Again, my choice for iterative over recursive hinges entirely on the execution speed from my experiment above. If there is more logic involved in pairing recursive/iterative with linear/binary, I'm not seeing it. 
+	
+---------------------------------
+
